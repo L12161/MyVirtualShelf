@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Shelf</title>
+<meta name="description" content="Books I read, films I watched, videos I loved.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Permanent+Marker&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-tab="books">
+<div class="bg" id="bg" aria-hidden="true"></div>
+<div class="bg-dim" aria-hidden="true"></div>
+<div class="amb amb-books" aria-hidden="true"></div>
+<div class="amb amb-films" aria-hidden="true"></div>
+<div class="amb amb-videos" aria-hidden="true"></div>
+<div class="spot" aria-hidden="true"></div>
+
+<div class="page">
+  <header class="topbar">
+    <a class="mark" id="siteTitle" href="#books">The Shelf</a>
+    <span class="meta" id="meta"></span>
+  </header>
+
+  <nav class="tabs" id="tabs" aria-label="What to show">
+    <button class="tab" type="button" data-tab="books"><span>Books</span><span class="tab-n" data-count="books">00</span></button>
+    <button class="tab" type="button" data-tab="films"><span>Films</span><span class="tab-n" data-count="films">00</span></button>
+    <button class="tab" type="button" data-tab="videos"><span>Videos</span><span class="tab-n" data-count="videos">00</span></button>
+    <span class="tab-ind" id="tabInd"></span>
+  </nav>
+
+  <div class="filters">
+    <label class="search">
+      <svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.6" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M10.5 10.5L14 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      <input id="search" type="search" placeholder="Search title or creator" aria-label="Search title or creator" autocomplete="off">
+    </label>
+    <div class="chips" id="rateChips" role="group" aria-label="Rating">
+      <button class="chip on" type="button" data-min="0" aria-pressed="true">Any rating</button>
+      <button class="chip" type="button" data-min="4" aria-pressed="false">4★ +</button>
+      <button class="chip" type="button" data-min="5" aria-pressed="false">5★ only</button>
+    </div>
+    <div class="chips" id="yearChips" role="group" aria-label="Year"></div>
+    <label class="sortl">Sort
+      <select id="sort">
+        <option value="new">Newest</option>
+        <option value="old">Oldest</option>
+        <option value="rating">Top rated</option>
+        <option value="az">A–Z</option>
+      </select>
+    </label>
+    <span class="count" id="count" aria-live="polite"></span>
+  </div>
+
+  <p class="hint"><span class="hint-hover">Hover a spine to flip it up · click to open</span><span class="hint-touch">Tap a spine to flip it up · tap again to open</span></p>
+
+  <main class="stack" id="stack"></main>
+</div>
+
+<section class="detail" id="detail" role="dialog" aria-modal="true" aria-labelledby="dTitle" hidden></section>
+
+<noscript><p class="noscript">This shelf needs JavaScript turned on.</p></noscript>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
