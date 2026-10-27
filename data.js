@@ -1,30 +1,29 @@
 /* ==========================================================================
    THE SHELF: your content lives in this file.
 
-   To add something:
-     1. (Books and films) put the cover image in the "covers" folder.
-     2. Copy one entry below, paste it at the TOP of its list, change the values.
-     3. Keep a comma after every closing brace  },  except you may leave it on the
-        last one too. That is fine.
+   Easiest: add things with the form at  <your site>/admin.html
+
+   By hand: put the cover in "covers", copy an entry below, paste it at the
+   TOP of its list and change the values. Keep the comma between entries.
    Dates are year-month, like "2026-08". Ratings are 1 to 5.
-   Videos only need the YouTube link: the thumbnail is fetched for you.
-   The sample entries below have no cover yet, so the site draws a stand-in
-   cover from their colors. Replace them with your own.
+   Videos only need the YouTube link (url): the thumbnail is fetched for you.
+
+   site.background      the background image (replace assets/background.jpg)
+   site.backgroundDim   0 = image at full strength, 1 = fully dark
    ========================================================================== */
 
 window.SHELF = {
   site: {
     title: "The Shelf",
     tagline: "things worth keeping",
-    background: "assets/background.jpg", // replace this file to change the background
-    backgroundDim: 0.72                  // 0 = image at full strength, 1 = fully dark
+    background: "assets/background.jpg",
+    backgroundDim: 0.72
   },
 
   books: [
     {
       title: "Project Hail Mary",
       author: "Andy Weir",
-      cover: "",                     // e.g. "covers/project-hail-mary.jpg"
       finished: "2026-09",
       rating: 5,
       take: "Pure fun. The problem-solving rhythm is addictive, and the friendship at the center really lands."
@@ -32,7 +31,6 @@ window.SHELF = {
     {
       title: "Dune",
       author: "Frank Herbert",
-      cover: "",
       finished: "2026-08",
       rating: 5,
       take: "Slow first hundred pages, then it swallowed my week. The politics hold up better than the prophecy."
@@ -40,7 +38,6 @@ window.SHELF = {
     {
       title: "Thinking, Fast and Slow",
       author: "Daniel Kahneman",
-      cover: "",
       finished: "2026-06",
       rating: 4,
       take: "Changed how I notice my own snap judgments. Some studies have not replicated, so read it with a pinch of salt."
@@ -48,7 +45,6 @@ window.SHELF = {
     {
       title: "The Pragmatic Programmer",
       author: "Andrew Hunt & David Thomas",
-      cover: "",
       finished: "2026-03",
       rating: 4,
       take: "Half of it reads like common sense now, which is the point. The tracer-bullets idea stuck with me."
@@ -56,7 +52,6 @@ window.SHELF = {
     {
       title: "Sapiens",
       author: "Yuval Noah Harari",
-      cover: "",
       finished: "2026-01",
       rating: 3,
       take: "Big, bold, sometimes too confident. Great fuel for arguments over dinner."
@@ -64,7 +59,6 @@ window.SHELF = {
     {
       title: "1984",
       author: "George Orwell",
-      cover: "",
       finished: "2025-10",
       rating: 5,
       take: "Bleaker every time I reread it. The appendix on Newspeak is quietly the scariest part."
@@ -73,10 +67,18 @@ window.SHELF = {
 
   films: [
     {
+      title: "Utsab",
+      director: "Rituparno Ghosh",
+      year: 2000,
+      cover: "covers/utsab.jpg",
+      watched: "2026-10",
+      rating: 5,
+      take: "Hindsight is 20/20. No movie lets you feel it as much as this one."
+    },
+    {
       title: "Interstellar",
       director: "Christopher Nolan",
       year: 2014,
-      cover: "",                     // e.g. "covers/interstellar.jpg" (a poster works well)
       watched: "2026-07",
       rating: 5,
       take: "The docking scene still makes my hands sweat. Messy science, huge heart."
@@ -85,7 +87,6 @@ window.SHELF = {
       title: "Spirited Away",
       director: "Hayao Miyazaki",
       year: 2001,
-      cover: "",
       watched: "2026-05",
       rating: 5,
       take: "Every frame is a painting. The train ride is the quietest, best scene in animation."
@@ -94,7 +95,6 @@ window.SHELF = {
       title: "Arrival",
       director: "Denis Villeneuve",
       year: 2016,
-      cover: "",
       watched: "2026-04",
       rating: 4,
       take: "A linguistics movie disguised as an alien movie. The structure only clicks at the end."
@@ -103,7 +103,6 @@ window.SHELF = {
       title: "The Matrix",
       director: "Lana & Lilly Wachowski",
       year: 1999,
-      cover: "",
       watched: "2026-02",
       rating: 5,
       take: "Holds up absurdly well. The lobby scene is still the gold standard."
@@ -112,7 +111,6 @@ window.SHELF = {
       title: "Parasite",
       director: "Bong Joon-ho",
       year: 2019,
-      cover: "",
       watched: "2025-12",
       rating: 5,
       take: "Funny until it suddenly is not. The staircase shots say everything."
